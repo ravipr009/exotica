@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.12)
-project(pybind11)
+project(pybind11_catkin)
 
 find_package(catkin REQUIRED)
 

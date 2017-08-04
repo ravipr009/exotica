@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>pybind11</name>
+  <name>pybind11_catkin</name>
   <version>2.1.1</version>
-  <description>The pybind11 package</description>
+  <description>Catkin wrapper for pybind11</description>
   <maintainer email="v.ivan@ed.ac.uk">Vladimir Ivan</maintainer>
   <license>BSD</license>
 
