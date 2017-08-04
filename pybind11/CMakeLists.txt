@@ -65,14 +65,10 @@ install(FILES ${PYBIND11_HEADERS}
 # GNUInstallDirs "DATADIR" wrong here; CMake search path wants "share".
 set(PYBIND11_CMAKECONFIG_INSTALL_DIR "${CATKIN_PACKAGE_SHARE_DESTINATION}/cmake/" CACHE STRING "install path for pybind11Config.cmake")
 
-configure_package_config_file(pybind11/tools/pybind11Config.cmake.in
-                              "${CMAKE_CURRENT_BINARY_DIR}/pybind11Config.cmake"
-                              INSTALL_DESTINATION ${PYBIND11_CMAKECONFIG_INSTALL_DIR})
 write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
                                  VERSION ${${PROJECT_NAME}_VERSION}
                                  COMPATIBILITY AnyNewerVersion)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
-              ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
-              tools/FindPythonLibsNew.cmake
-              tools/pybind11Tools.cmake
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
+              pybind11/tools/FindPythonLibsNew.cmake
+              pybind11/tools/pybind11Tools.cmake
         DESTINATION ${PYBIND11_CMAKECONFIG_INSTALL_DIR})

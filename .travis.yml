@@ -15,6 +15,7 @@ env:
     - ROS_DISTRO=kinetic UPSTREAM_WORKSPACE=file
 install:
   - bash $TRAVIS_BUILD_DIR/.ci/before_install.sh >> /dev/null
+  - git submodule update --init --recursive
   - git clone https://github.com/ros-industrial/industrial_ci.git .ci_config
   - 
 script:
